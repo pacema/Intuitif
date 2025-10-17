@@ -1,0 +1,54 @@
+Prompt:
+Create a premium, minimalist, and emotionally intelligent one-page website for Intuitif Marketing, a boutique consultancy that blends human intuition and artificial intelligence to help premium and purpose-driven brands grow.
+🔹 Overall Style
+•	Aesthetic: modern, elegant, editorial, and balanced — think Apple or Matter of Form style.
+•	Layout: full-width sections with generous white space, smooth fade-in animations, and subtle horizontal dividers.
+•	Color palette:
+o	Deep Charcoal #020202 (headlines)
+o	Graphite Gray #4b4b4b (body text)
+o	Light Gray #COD1d9 (primary accent for links, hover, buttons)
+o	Stark White #FFFFFF (main background)
+o	Dark Blue #296887 (contrast background)
+o	Cloud White#F4f4f4 (alternative background)
+o	Rusty Orange #cc4e00 (occasional highlight)
+•	Typography:
+o	Headings: Neue Haas Grotesk or Helvetica Now Display (bold, uppercase or sentence case).
+o	Body text: DM Sans or Inter (regular to medium).
+o	Optional quote/accent text: Playfair Display for luxury tone.
+•	Use subtle scroll-based reveals (fade-up) for sections.
+•	Button style: rounded, accent color background with white text; hover = color invert.
+🔹 Header
+•	Left: logo (SVG version of “Intuitif Marketing + AI”)
+•	Right: simple nav links → “About,” “Services,” “Impact,” “Contact”
+•	Sticky header with subtle shadow on scroll.
+🔹 Hero Section
+•	Tagline: “Where intuition meets intelligence.”
+•	Subline: “We help premium and purpose-driven brands grow through emotionally resonant, AI-powered marketing.”
+•	CTA Button: “Start the Conversation” (links to contact section).
+•	Background: clean white with faint linear gradient or abstract spiral/fingerprint accent in pale gray.
+🔹 About Section
+•	Headline: “Intuition + Intelligence = Impact.”
+•	2–3 sentence overview:
+“We believe marketing is both art and science — the fusion of human intuition and machine intelligence. At Intuitif, we design strategies that connect data with emotion to move audiences and drive growth.”
+•	Optional quote in italic Playfair Display.
+🔹 Services Section
+•	Headline: “What We Do”
+•	Three horizontally aligned cards (with subtle hover lift animation):
+1.	Strategy & Leadership — Fractional CMO and brand strategy guidance for purpose-driven and premium businesses.
+2.	Brand Storytelling — Crafting emotionally intelligent content and positioning that builds desire and trust.
+3.	AI-Powered Growth — Leveraging machine learning tools to optimize content, ads, and audience insight.
+🔹 Impact Section
+•	Headline: “Our Work”
+•	Placeholder space for 2–3 case study tiles with imagery and hover overlay showing metrics or quotes.
+•	CTA: “View More Impact” (smooth scroll or modal).
+🔹 Contact Section
+•	Headline: “Let’s Create Something Intuitive.”
+•	Short form (Name, Email, Message).
+•	Social icons (LinkedIn + Email).
+•	Footer: small gray text — © 2025 Intuitif Marketing & AI.
+•	Favicon: As uploaded – white fingerprint image on #175c7d color circle
+🔹 Additional Details
+•	Use SVG logo and accent icon in favicon.
+•	Optimize layout for mobile and tablet with fluid typography.
+•	Include smooth scroll behavior.
+•	Keep the overall site <2MB for fast load.
