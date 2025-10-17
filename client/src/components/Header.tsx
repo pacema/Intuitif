@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import logo from '@assets/Intuitif Logo_1760745167631.png';
 
 interface HeaderProps {
   onNavigate?: (section: string) => void;
@@ -40,9 +41,13 @@ export default function Header({ onNavigate }: HeaderProps) {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="text-xl font-bold tracking-tight">
-          Intuitif Marketing<span className="text-primary ml-1">+ AI</span>
-        </div>
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="flex items-center"
+          data-testid="button-logo"
+        >
+          <img src={logo} alt="Intuitif Marketing + AI" className="h-10" />
+        </button>
         <nav className="hidden md:flex items-center gap-8">
           <button
             onClick={() => scrollToSection('about')}
