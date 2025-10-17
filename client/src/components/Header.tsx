@@ -46,7 +46,7 @@ export default function Header({ onNavigate }: HeaderProps) {
           className="flex items-center"
           data-testid="button-logo"
         >
-          <img src={logo} alt="Intuitif Marketing + AI" className="h-16 md:h-20" />
+          <img src={logo} alt="Intuitif Marketing + AI" className="h-64 md:h-80" />
         </button>
         <nav className="hidden md:flex items-center gap-8">
           <button
