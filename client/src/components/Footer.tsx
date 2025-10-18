@@ -1,4 +1,4 @@
-import logoVideo from '@assets/Intuitif_1760760931797.mp4';
+import logoVideo from '@assets/Intuitif Rotating Logo_1760762202652.mp4';
 
 export default function Footer() {
   return (

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import logoVideo from '@assets/Intuitif_1760760931797.mp4';
+import logoVideo from '@assets/Intuitif Rotating Logo_1760762202652.mp4';
 
 interface HeaderProps {
   onNavigate?: (section: string) => void;
