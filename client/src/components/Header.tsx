@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import logo from '@assets/Intuitif Logo_1760745167631.png';
+import logo from '@assets/Untitled design (1)_1760746715463.png';
 
 interface HeaderProps {
   onNavigate?: (section: string) => void;
