@@ -10,7 +10,7 @@ export default function Footer() {
             muted
             loop
             playsInline
-            className="h-14 w-auto opacity-60"
+            className="h-28 w-auto opacity-60"
             style={{ objectFit: 'contain' }}
           >
             <source src={logoVideo} type="video/mp4" />

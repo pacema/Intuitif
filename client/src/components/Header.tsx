@@ -51,7 +51,7 @@ export default function Header({ onNavigate }: HeaderProps) {
             muted
             loop
             playsInline
-            className="h-16 md:h-20 w-auto"
+            className="h-32 md:h-40 w-auto"
             style={{ objectFit: 'contain' }}
           >
             <source src={logoVideo} type="video/mp4" />
