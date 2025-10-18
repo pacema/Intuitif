@@ -33,7 +33,7 @@ export default function Hero({ onCTAClick }: HeroProps) {
           backgroundPosition: 'center',
         }}
       />
-      <div className="relative max-w-4xl mx-auto px-6 text-center py-32">
+      <div className="relative max-w-4xl mx-auto px-6 text-center py-32 md:pb-16">
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-1000">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
             Where intuition meets intelligence.

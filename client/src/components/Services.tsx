@@ -21,28 +21,29 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 md:py-32 border-t border-border">
+    <section id="services" className="py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-center mb-16">
           What We Do
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card
+            <div
               key={index}
-              className="p-8 transition-transform duration-300 hover:-translate-y-2 hover-elevate"
+              className="p-8 rounded-md transition-transform duration-300 hover:-translate-y-2"
+              style={{ backgroundColor: '#296887' }}
               data-testid={`card-service-${index}`}
             >
               <div className="space-y-4">
-                <div className="w-12 h-12 rounded-md bg-primary/10 flex items-center justify-center">
-                  <service.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 rounded-md bg-white/20 flex items-center justify-center">
+                  <service.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold tracking-tight">{service.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <h3 className="text-2xl font-bold tracking-tight text-white">{service.title}</h3>
+                <p className="text-white/90 leading-relaxed">
                   {service.description}
                 </p>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>

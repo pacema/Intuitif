@@ -28,9 +28,9 @@ export default function Impact() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="impact" className="py-24 md:py-32 border-t border-border bg-card">
+    <section id="impact" className="py-24 md:py-32" style={{ backgroundColor: '#296887' }}>
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-center mb-16 text-white">
           Our Work
         </h2>
         <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -68,7 +68,7 @@ export default function Impact() {
         <div className="text-center">
           <button
             onClick={() => console.log('View more impact clicked')}
-            className="text-primary font-medium hover:underline transition-all"
+            className="text-white font-medium hover:underline transition-all"
             data-testid="button-view-more-impact"
           >
             View More Impact →
