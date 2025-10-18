@@ -1,23 +1,26 @@
 import { useState } from 'react';
 import caseStudy1 from '@assets/generated_images/Marketing_case_study_mockup_38f7e090.png';
-import caseStudy2 from '@assets/generated_images/Brand_storytelling_case_study_e7d45601.png';
+import caseStudyVideo from '@assets/Rapaport Ad_1760763298515.mp4';
 import caseStudy3 from '@assets/generated_images/AI_analytics_case_study_0f4d7023.png';
 
 const caseStudies = [
   {
     image: caseStudy1,
+    type: 'image' as const,
     title: 'Premium Brand Launch',
     metric: '3x revenue growth in 6 months',
     quote: 'Intuitif transformed our brand story into a movement.',
   },
   {
-    image: caseStudy2,
+    image: caseStudyVideo,
+    type: 'video' as const,
     title: 'Content Strategy Overhaul',
     metric: '250% increase in engagement',
     quote: 'They understood our audience better than we did.',
   },
   {
     image: caseStudy3,
+    type: 'image' as const,
     title: 'AI-Driven Campaign',
     metric: '40% reduction in CAC',
     quote: 'Data-driven insights with a human touch.',
@@ -42,11 +45,23 @@ export default function Impact() {
               onMouseLeave={() => setHoveredIndex(null)}
               data-testid={`card-case-study-${index}`}
             >
-              <img
-                src={study.image}
-                alt={study.title}
-                className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+              {study.type === 'video' ? (
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105"
+                >
+                  <source src={study.image} type="video/mp4" />
+                </video>
+              ) : (
+                <img
+                  src={study.image}
+                  alt={study.title}
+                  className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              )}
               <div
                 className={`absolute inset-0 bg-primary/90 transition-opacity duration-300 flex flex-col items-center justify-center p-8 text-center ${
                   hoveredIndex === index ? 'opacity-100' : 'opacity-0'
