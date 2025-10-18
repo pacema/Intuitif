@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import logo from '@assets/Untitled design (1)_1760746715463.png';
+import logo from '@assets/Intuitif_1760748313055.png';
 
 interface HeaderProps {
   onNavigate?: (section: string) => void;
@@ -46,7 +46,7 @@ export default function Header({ onNavigate }: HeaderProps) {
           className="flex items-center"
           data-testid="button-logo"
         >
-          <img src={logo} alt="Intuitif Marketing + AI" className="h-64 md:h-80" />
+          <img src={logo} alt="Intuitif Marketing + AI" className="h-12 md:h-16 w-auto" />
         </button>
         <nav className="hidden md:flex items-center gap-8">
           <button
