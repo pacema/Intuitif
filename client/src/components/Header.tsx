@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import logo from '@assets/Intuitif_1760748313055.png';
+import logoVideo from '@assets/Intuitif_1760760931797.mp4';
 
 interface HeaderProps {
   onNavigate?: (section: string) => void;
@@ -46,7 +46,16 @@ export default function Header({ onNavigate }: HeaderProps) {
           className="flex items-center"
           data-testid="button-logo"
         >
-          <img src={logo} alt="Intuitif Marketing + AI" className="h-16 md:h-20 w-auto" />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="h-16 md:h-20 w-auto"
+            style={{ objectFit: 'contain' }}
+          >
+            <source src={logoVideo} type="video/mp4" />
+          </video>
         </button>
         <nav className="hidden md:flex items-center gap-8">
           <button
