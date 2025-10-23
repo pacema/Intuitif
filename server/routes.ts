@@ -15,8 +15,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
 
-      // N8N webhook URL
-      const n8nWebhookUrl = "https://pacema.app.n8n.cloud/webhook-test/e7e6e9e0-40ec-4b5d-b7ce-789be73215e5";
+      // Get N8N webhook URL from environment variable
+      const n8nWebhookUrl = process.env.N8N_WEBHOOK_URL;
+
+      if (!n8nWebhookUrl) {
+        console.error("N8N_WEBHOOK_URL environment variable is not set");
+        return res.status(500).json({ 
+          error: "Webhook configuration is missing. Please contact support." 
+        });
+      }
 
       // Forward data to N8N webhook
       const response = await fetch(n8nWebhookUrl, {
