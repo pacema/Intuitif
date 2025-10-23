@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/hooks/use-toast';
 import { Linkedin, Mail } from 'lucide-react';
 
 export default function Contact() {
@@ -10,10 +11,48 @@ export default function Contact() {
     email: '',
     message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to submit form');
+      }
+
+      toast({
+        title: 'Message sent!',
+        description: 'Thank you for reaching out. We\'ll get back to you soon.',
+      });
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+      });
+    } catch (error) {
+      toast({
+        title: 'Error',
+        description: error instanceof Error ? error.message : 'Failed to send message. Please try again.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -63,10 +102,11 @@ export default function Contact() {
           <Button
             type="submit"
             size="lg"
+            disabled={isSubmitting}
             className="w-full bg-accent text-accent-foreground border border-accent-border hover:bg-background hover:text-foreground"
             data-testid="button-submit-contact"
           >
-            Send Message
+            {isSubmitting ? 'Sending...' : 'Send Message'}
           </Button>
         </form>
 
