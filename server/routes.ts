@@ -25,18 +25,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
 
-      // Forward data to N8N webhook
-      const response = await fetch(n8nWebhookUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          message,
-          timestamp: new Date().toISOString(),
-        }),
+      // Build URL with query parameters for GET request
+      const url = new URL(n8nWebhookUrl);
+      url.searchParams.append('name', name);
+      url.searchParams.append('email', email);
+      url.searchParams.append('message', message);
+      url.searchParams.append('timestamp', new Date().toISOString());
+
+      // Forward data to N8N webhook via GET request
+      const response = await fetch(url.toString(), {
+        method: "GET",
       });
 
       if (!response.ok) {
